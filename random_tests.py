@@ -11,10 +11,11 @@ import pandas as pd
 
 
 client = Client()
-result = client.get_order_book(instrument='BTC-PERPETUAL', depth=1000)
-bid = result['bids']
-ask = result['asks']
-print("bid, length {}:\n{}".format(len(bid),bid))
-print("ask, length {}:\n{}".format(len(ask),ask))
+#client.order(instrument_name="BTC-PERPETUAL", side="long", amount=50000, order_type="market")
+#client.close_position(instrument="BTC-PERPETUAL", order_type = "limit")
+
+
+res = client.get_open_orders()
+print(res)
 
 
